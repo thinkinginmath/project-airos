@@ -44,6 +44,26 @@ Check [docs/](docs/) for early developer documentation.
 
 ---
 
+## 🌐 Website
+
+The marketing site for Project Airos lives in [`site/`](site/). It is a static HTML/CSS experience that highlights the mission,
+technology, and flagship applications inspired by Meta's Project Aria research.
+
+### Local preview
+
+1. `cd site`
+2. Start a lightweight web server: `python -m http.server 8000`
+3. Open `http://localhost:8000/index.html` in your browser and iterate on the content.
+
+The site uses shared assets and relative links, so always run it from the `site/` directory or through a static hosting service.
+
+### Deployment
+
+Read [docs/deployment.md](docs/deployment.md) for recommended workflows to publish the latest site to GitHub Pages, Netlify, or
+other static hosts as content evolves.
+
+---
+
 ## 🌐 Roadmap
 
 - [ ] Voice-first client (ASR + TTS + chat loop).  

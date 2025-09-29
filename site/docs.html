@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Airos Docs</title>
+    <meta
+      name="description"
+      content="Quickstart guides and reference material for running Project Airos locally, on the edge, or in the cloud."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span>Project Airos</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+        <div class="nav-links" id="primary-navigation">
+          <a href="about.html">About</a>
+          <a href="tech.html">Technology</a>
+          <a href="applications.html">Applications</a>
+          <a href="docs.html" aria-current="page">Docs</a>
+          <a href="community.html">Community</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="badge">Documentation</div>
+        <h1>Build with Airos</h1>
+        <p>
+          High-level guides and references will grow into a full documentation portal. Start here for prototypes and pilot
+          deployments.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <article class="highlight-box">
+          <h2>Quickstart</h2>
+          <div class="list">
+            <div><strong>1.</strong> Clone the repository and explore the sample agents.</div>
+            <div><strong>2.</strong> Provision dependencies: Docker, Node.js, Python, and your preferred GPU runtime.</div>
+            <div><strong>3.</strong> Configure credentials for OpenAI, Anthropic, Qwen, or on-prem models.</div>
+            <div><strong>4.</strong> Launch the voice-first demo client and experiment with local inference.</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section">
+        <div class="grid">
+          <article class="card">
+            <h3>Local development</h3>
+            <p>Use Docker Compose recipes to bring up the orchestrator, ASR, TTS, and UI services with hot reload.</p>
+            <div class="chip-list">
+              <span class="chip">Docker</span>
+              <span class="chip">Hot reload</span>
+              <span class="chip">Live transcripts</span>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Edge deployment</h3>
+            <p>Deploy to edge clusters with Kubernetes or Nomad and leverage GPU pools for heavy workloads.</p>
+            <div class="chip-list">
+              <span class="chip">K8s</span>
+              <span class="chip">Nomad</span>
+              <span class="chip">Observability</span>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Extending modules</h3>
+            <p>Add new ASR, TTS, or LLM backends by implementing the adapter contract and registering capabilities.</p>
+            <div class="chip-list">
+              <span class="chip">Adapter SDK</span>
+              <span class="chip">Capability graph</span>
+              <span class="chip">Testing harness</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="highlight-box">
+          <h2>Docs roadmap</h2>
+          <p>Upcoming additions to the documentation hub.</p>
+          <ul class="list">
+            <li>Deep dives into ASR/TTS optimization and streaming protocols.</li>
+            <li>Guides for memory synchronization across devices.</li>
+            <li>Sample curriculum for the AI tutor deployment.</li>
+            <li>API reference for the agent orchestration layer.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div>
+          <strong>Project Airos</strong>
+          <p class="quote">Documentation evolves with the community — contribute guides, samples, and tutorials.</p>
+        </div>
+        <div class="footer-links">
+          <a href="docs.html">Docs</a>
+          <a href="community.html">Community</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <small>© <span id="year"></span> Project Airos. MIT Licensed.</small>
+      </div>
+    </footer>
+    <script src="assets/app.js" defer></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

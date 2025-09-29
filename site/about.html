@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Project Airos</title>
+    <meta
+      name="description"
+      content="Learn how Project Airos empowers sovereign, privacy-first AI agents inspired by Meta's Project Aria and community-led innovation."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span>Project Airos</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+        <div class="nav-links" id="primary-navigation">
+          <a href="about.html" aria-current="page">About</a>
+          <a href="tech.html">Technology</a>
+          <a href="applications.html">Applications</a>
+          <a href="docs.html">Docs</a>
+          <a href="community.html">Community</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="badge">Our story</div>
+        <h1>Why Project Airos exists</h1>
+        <p>
+          We believe AI should be sovereign: user-controlled, transparent, and available on devices people already own. Project
+          Airos blends frontier research like Meta’s Project Aria with open-source values and community co-creation.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <article class="highlight-box">
+          <h2>The challenge</h2>
+          <p>
+            AI ecosystems today are cloud-only, gated by proprietary APIs, and designed to capture data. This model leaves
+            individuals, educators, and smaller labs without privacy, agency, or affordability.
+          </p>
+          <div class="list">
+            <div><strong>Vendor lock-in:</strong> Closed platforms shape the rules and pricing.</div>
+            <div><strong>Data risk:</strong> Personal context and sensor feeds must leave the device to become useful.</div>
+            <div><strong>Equity gap:</strong> Emerging markets and public institutions can’t rely on always-on connectivity.</div>
+          </div>
+        </article>
+        <article class="highlight-box">
+          <h2>Our response</h2>
+          <p>
+            Airos is a modular Agent OS that runs locally or at the edge. It empowers builders to orchestrate voice, vision, and
+            context-aware intelligence with open tooling.
+          </p>
+          <div class="list">
+            <div><strong>Local-first:</strong> Keep computation and memory on trusted hardware whenever possible.</div>
+            <div><strong>Portable memory:</strong> Combine short-term and long-term context under user ownership.</div>
+            <div><strong>Community-driven:</strong> Build in the open, inspired by pioneers like Project Aria while extending what’s possible.</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section">
+        <div>
+          <h2>What makes Airos different</h2>
+          <p>
+            Meta’s Project Aria showed how rich sensor suites can power advanced AR experiences, yet the stack remained closed.
+            Airos takes the inspiration and opens the blueprint: from the voice loop to the memory fabric, every layer is built to
+            be forked, audited, and remixed.
+          </p>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Dimension</th>
+              <th scope="col">Closed status quo</th>
+              <th scope="col">Project Airos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Deployment</strong></td>
+              <td>Cloud-dependent, single provider</td>
+              <td>On-device, edge, or hybrid — user decides</td>
+            </tr>
+            <tr>
+              <td><strong>Transparency</strong></td>
+              <td>Opaque models and pipelines</td>
+              <td>Open-source, auditable components</td>
+            </tr>
+            <tr>
+              <td><strong>Memory</strong></td>
+              <td>Data locked in proprietary silos</td>
+              <td>Portable memory fabric under user control</td>
+            </tr>
+            <tr>
+              <td><strong>Community</strong></td>
+              <td>Limited access to research artifacts</td>
+              <td>Open roadmap, shared demos, collaborative pilots</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="content-section">
+        <div>
+          <h2>Roadmap milestones</h2>
+          <p>The core team and community contributors focus on three parallel tracks of development.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Voice-first interfaces</h3>
+            <p>Voice UX toolkits, wake word inference, and multimodal prompt loops for daily wearables.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Memory + personalization</h3>
+            <p>Portable vector stores and secure sync protocols for individuals, families, and classrooms.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Edge deployment program</h3>
+            <p>Blueprints for running Airos in labs, schools, and community spaces with commodity hardware.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div>
+          <strong>Project Airos</strong>
+          <p class="quote">Sovereign AI crafted by and for the communities who deploy it.</p>
+        </div>
+        <div class="footer-links">
+          <a href="docs.html">Docs</a>
+          <a href="community.html">Community</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <small>© <span id="year"></span> Project Airos. MIT Licensed.</small>
+      </div>
+    </footer>
+    <script src="assets/app.js" defer></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
