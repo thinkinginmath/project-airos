@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Airos Technology</title>
+    <meta
+      name="description"
+      content="Explore the modular architecture behind Project Airos — from MCP orchestration to local-first memory fabric for smart devices."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span>Project Airos</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+        <div class="nav-links" id="primary-navigation">
+          <a href="about.html">About</a>
+          <a href="tech.html" aria-current="page">Technology</a>
+          <a href="applications.html">Applications</a>
+          <a href="docs.html">Docs</a>
+          <a href="community.html">Community</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="badge">Architecture</div>
+        <h1>The hybrid stack for sovereign agents</h1>
+        <p>
+          Project Airos weaves together open-source components for voice, vision, memory, and orchestration. Deploy on-device,
+          on the edge, or in the cloud with the same blueprint.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <article class="highlight-box">
+          <h2>Core layers</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>Multimodal interface</h3>
+              <p>
+                Reference apps for voice + GUI on phones, PCs, and smart glasses inspired by Meta’s Project Aria sensor suite.
+              </p>
+              <div class="chip-list">
+                <span class="chip">Smart glasses HUD</span>
+                <span class="chip">Desktop console</span>
+                <span class="chip">Mobile app</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Agent core</h3>
+              <p>
+                MCP-compliant orchestrator coordinating ASR, TTS, LLM, and tool calls with deterministic routing and guardrails.
+              </p>
+              <div class="chip-list">
+                <span class="chip">Dora runtime</span>
+                <span class="chip">MCP adapters</span>
+                <span class="chip">Skill graph</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Memory fabric</h3>
+              <p>
+                Local vector databases synchronize short-term dialogue and long-term knowledge with user-governed retention
+                policies.
+              </p>
+              <div class="chip-list">
+                <span class="chip">SQLite + pgvector</span>
+                <span class="chip">Open embeddings</span>
+                <span class="chip">Encrypted sync</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Inference mesh</h3>
+              <p>
+                Plug into vLLM, Qwen, LLaMA, and more. Balance local models with burst-to-cloud options when latency matters.
+              </p>
+              <div class="chip-list">
+                <span class="chip">vLLM</span>
+                <span class="chip">Ollama</span>
+                <span class="chip">Anthropic</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section">
+        <div class="split">
+          <div>
+            <h2>Deployment topologies</h2>
+            <p>
+              Choose the footprint that matches your privacy, latency, and cost profile. Airos tooling supports containerized
+              rollouts across hardware tiers.
+            </p>
+            <ul class="list">
+              <li><strong>On-device:</strong> Wearables and mobile hardware with quantized models.</li>
+              <li><strong>Edge cluster:</strong> Micro data centers for schools, offices, and research labs.</li>
+              <li><strong>Hybrid cloud:</strong> Burst to GPUs for heavy workloads, keep context local.</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <span>Profiles for GPU, CPU, and NPU targets</span>
+            <span>Reference Docker Compose stacks</span>
+            <span>Observability via OpenTelemetry</span>
+            <span>Secure key + secret storage guidance</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div>
+          <h2>Extensibility</h2>
+          <p>Design APIs and adapters to encourage experimentation.</p>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <h3>ASR / TTS plugins</h3>
+            <p>Swap Whisper, FunASR, PrimeSpeech, or local DSP stacks using a simple adapter contract.</p>
+          </div>
+          <div class="card">
+            <h3>LLM routers</h3>
+            <p>Route prompts across local, edge, and cloud LLMs with policy-based orchestration and caching.</p>
+          </div>
+          <div class="card">
+            <h3>Toolchains</h3>
+            <p>Expose device sensors, calendars, and third-party APIs through capability-safe tool interfaces.</p>
+          </div>
+          <div class="card">
+            <h3>Memory connectors</h3>
+            <p>Integrate vector stores, graph databases, or even paper notebooks via scanning workflows.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div>
+          <strong>Project Airos</strong>
+          <p class="quote">Engineering the open stack for sovereign AI on every device.</p>
+        </div>
+        <div class="footer-links">
+          <a href="docs.html">Docs</a>
+          <a href="community.html">Community</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <small>© <span id="year"></span> Project Airos. MIT Licensed.</small>
+      </div>
+    </footer>
+    <script src="assets/app.js" defer></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

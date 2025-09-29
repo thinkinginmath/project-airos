@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Airos Applications</title>
+    <meta
+      name="description"
+      content="Discover flagship applications powered by Project Airos, from smart glasses agents to privacy-first education tutors."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span>Project Airos</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+        <div class="nav-links" id="primary-navigation">
+          <a href="about.html">About</a>
+          <a href="tech.html">Technology</a>
+          <a href="applications.html" aria-current="page">Applications</a>
+          <a href="docs.html">Docs</a>
+          <a href="community.html">Community</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="badge">Use cases</div>
+        <h1>Flagship demos that prove the mission</h1>
+        <p>
+          The Project Airos stack unlocks immersive wearables and equitable learning experiences. Explore how we adapt research
+          like Meta’s Project Aria into open deployments.
+        </p>
+      </section>
+
+      <section class="content-section" id="smart-glasses">
+        <article class="highlight-box">
+          <h2>Smart Glasses Agent</h2>
+          <p class="lead">
+            Marrying Project Aria’s sensor fidelity with sovereign AI. Always-available assistance that respects your privacy.
+          </p>
+          <div class="split">
+            <div class="list">
+              <div><strong>Voice-first loop:</strong> Wake words, ASR, and conversational AI running locally.</div>
+              <div><strong>Vision Q&A:</strong> Capture photos, ask contextual questions, and receive on-device insights.</div>
+              <div><strong>Safety by design:</strong> Physical shutters, LED indicators, and granular consent for memory.</div>
+            </div>
+            <div class="feature-visual">
+              <span>Wearable SDK with sensor simulators</span>
+              <span>Offline inference packs</span>
+              <span>Edge sync with trusted hubs</span>
+              <span>Open hardware reference design</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section" id="education">
+        <article class="highlight-box">
+          <h2>AI for Education Tutor</h2>
+          <p class="lead">
+            Personalized, Socratic guidance for learners — delivered on affordable devices without exposing student data.
+          </p>
+          <div class="split">
+            <div class="list">
+              <div><strong>Adaptive dialogue:</strong> Track misconceptions and progress in local vector memory.</div>
+              <div><strong>Hybrid deployment:</strong> Run on classroom edge servers or offline laptops.</div>
+              <div><strong>Inclusive access:</strong> Multilingual ASR/TTS pipelines and low-bandwidth optimization.</div>
+            </div>
+            <div class="feature-visual">
+              <span>Curriculum-aligned prompt packs</span>
+              <span>Teacher dashboards with opt-in sharing</span>
+              <span>Community translation contributions</span>
+              <span>Guardrails for safe tutoring</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section">
+        <div class="highlight-box">
+          <h2>More frontiers</h2>
+          <p>
+            Airos is designed for any domain where sovereignty, privacy, and multimodal intelligence matter.
+          </p>
+          <div class="grid">
+            <div class="card">
+              <h3>Healthcare assistive devices</h3>
+              <p>Securely assist clinicians and caregivers with on-premise inference and auditable logs.</p>
+            </div>
+            <div class="card">
+              <h3>Industrial safety copilots</h3>
+              <p>Overlay guidance in AR headsets with offline failover and ruggedized hardware support.</p>
+            </div>
+            <div class="card">
+              <h3>Creative studios</h3>
+              <p>Blend voice, gesture, and spatial computing for immersive storytelling and design sprints.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div>
+          <strong>Project Airos</strong>
+          <p class="quote">From wearables to classrooms, Airos brings open, sovereign agents to real-world challenges.</p>
+        </div>
+        <div class="footer-links">
+          <a href="docs.html">Docs</a>
+          <a href="community.html">Community</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <small>© <span id="year"></span> Project Airos. MIT Licensed.</small>
+      </div>
+    </footer>
+    <script src="assets/app.js" defer></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
