@@ -5,6 +5,7 @@ The Project Airos website is the public-facing home for an **open-source AI Agen
 - Communicate the **vision**: privacy-first, local + edge inference, sovereign AI.
 - Provide **resources** for developers, researchers, and contributors.
 - Act as a **hub** for community, docs, and code.
+- Showcase **flagship demo applications** (Smart Glasses, AI for Education).
 
 ---
 
@@ -23,6 +24,7 @@ The Project Airos website is the public-facing home for an **open-source AI Agen
 - **Vision Statement**:  
   - How Airos differs from Meta Aria / Google Astra.  
   - Sovereign AI principle.  
+- **Flagship Demos**: Smart Glasses + AI for Education (with links to detail pages).
 
 ### 2. About
 - The problem with current AI ecosystems (cloud-only, vendor lock-in, privacy risks).  
@@ -38,25 +40,38 @@ The Project Airos website is the public-facing home for an **open-source AI Agen
   - Memory layer (local vector DB).  
 - Supported devices: smartphones, PCs, smart glasses.  
 
-### 4. Community
+### 4. Applications
+- **Smart Glasses Agent**  
+  - Inspired by Meta Aria & Google Astra but open + privacy-first.  
+  - Voice-first interaction (ASR/TTS).  
+  - Vision Q&A (photo capture → ask question).  
+  - Local-first with privacy controls (shutter, LED, user-owned memory).  
+- **AI for Education Tutor**  
+  - Personalized, Socratic-style tutoring.  
+  - Hybrid deployment (on-device for students, edge for schools).  
+  - Local/portable memory for progress tracking.  
+  - Designed for underserved communities with privacy and equity.  
+
+### 5. Community
 - Links to GitHub repo.  
 - How to contribute (issues, PRs, discussions).  
 - Code of Conduct.  
 - Mailing list / Discord / Slack (to decide).  
 
-### 5. Documentation
+### 6. Documentation
 - Quickstart (install on phone/PC).  
 - Running Airos with Docker.  
 - Using Airos with LLM APIs (OpenAI Realtime, Qwen, LLaMA).  
 - Extending modules (add new ASR, TTS, LLM backends).  
+- Use cases: Smart Glasses & Education demos.
 
-### 6. Blog / Updates
+### 7. Blog / Updates
 - Release announcements.  
 - Tutorials.  
 - Partner contributions.  
 - Conference talks (e.g., GOSIM Hangzhou 2025).  
 
-### 7. Contact
+### 8. Contact
 - Team intro.  
 - Email contact.  
 - Press/media kit.  
@@ -86,6 +101,7 @@ The Project Airos website is the public-facing home for an **open-source AI Agen
 - `/` → Landing page  
 - `/about` → Vision & background  
 - `/tech` → Technology overview  
+- `/applications` → Smart Glasses + Education Tutor use cases  
 - `/docs` → Quickstart + Developer Docs  
 - `/community` → Contribution guidelines  
 - `/blog` → News & updates  
