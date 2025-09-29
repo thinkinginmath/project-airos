@@ -25,6 +25,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Verify site directory exists
+        run: |
+          echo "Checking if site directory exists..."
+          ls -la
+          if [ -d "site" ]; then
+            echo "site directory found"
+            ls -la site/
+          else
+            echo "ERROR: site directory not found!"
+            exit 1
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
