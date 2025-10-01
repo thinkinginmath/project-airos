@@ -80,8 +80,8 @@ The Project Airos website is the public-facing home for an **open-source AI Agen
 
 ## Technical Requirements
 
-- **Framework**: Next.js or Astro (static-friendly + supports Markdown docs).  
-- **Styling**: TailwindCSS or CSS modules for flexibility.  
+- **Framework**: Astro (static-first with component-based authoring and Markdown support).
+- **Styling**: TailwindCSS or CSS modules for flexibility.
 - **Docs**: Use Markdown-based system (MDX or Docusaurus-style).  
 - **Hosting**: GitHub Pages / Vercel / Netlify for CI/CD.  
 - **SEO**: Basic metadata (open graph, keywords, sitemap).  

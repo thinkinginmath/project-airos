@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout
+  title="Project Airos — Sovereign AI, in your hands"
+  description="Project Airos is the open-source Agent OS for on-device and edge intelligence. Inspired by Meta's Project Aria, we deliver privacy-first AI agents that run wherever people live, work, and create."
+>
+  <section class="hero">
+    <div class="hero-text">
+      <div class="badge">Open-source agent OS</div>
+      <h1>Sovereign AI, in your hands.</h1>
+      <p>
+        Project Airos is the open-source Agent OS for on-device and edge intelligence. Inspired by Meta's Project Aria and other
+        frontier research, we deliver privacy-first AI agents that run wherever people live, work, and create.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="/docs">Get started</a>
+        <a class="button secondary" href="https://github.com/project-airos" target="_blank" rel="noreferrer">
+          Explore GitHub
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-orbital"></div>
+      <div class="feature-visual">
+        <span>Edge-ready orchestration</span>
+        <span>Privacy-first wearable UX</span>
+        <span>Voice + vision multimodal loop</span>
+        <span>Portable memory across devices</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Why Airos now?</h2>
+    <p class="lead">
+      AI is becoming the operating layer for daily life, yet today’s solutions are cloud-bound and vendor-controlled. Project
+      Airos puts sovereign intelligence in the hands of builders, researchers, and communities.
+    </p>
+    <div class="grid">
+      <article class="card">
+        <h3>Local-first performance</h3>
+        <p>
+          Run ASR, TTS, and LLM inference on-device or at the edge. Use the cloud when you choose, not when you are forced.
+        </p>
+        <div class="chip-list">
+          <span class="chip">Phones</span>
+          <span class="chip">PCs</span>
+          <span class="chip">Wearables</span>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Transparent + auditable</h3>
+        <p>
+          Airos is open-source from core orchestration to UX. Inspect, customize, and extend everything you deploy.
+        </p>
+        <div class="chip-list">
+          <span class="chip">MCP</span>
+          <span class="chip">Rust + Python</span>
+          <span class="chip">OSS LLMs</span>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Inspired by pioneers</h3>
+        <p>
+          Learn from Meta’s Project Aria hardware research without the walled garden. Airos embraces open communities and
+          sovereign data.
+        </p>
+        <div class="chip-list">
+          <span class="chip">Project Aria</span>
+          <span class="chip">Project Astra</span>
+          <span class="chip">Open XR</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="split">
+      <div>
+        <h2>Composable stack for multimodal agents</h2>
+        <p class="lead">
+          Build voice-first, vision-aware agents with modular components. Choose the best ASR, TTS, LLM, and memory providers for
+          your deployment.
+        </p>
+        <div class="chip-list">
+          <span class="chip">Whisper · FunASR</span>
+          <span class="chip">PrimeSpeech · Piper</span>
+          <span class="chip">vLLM · Qwen · Claude</span>
+          <span class="chip">Local vector DB</span>
+        </div>
+      </div>
+      <div>
+        <h3>Orchestrate intelligence across devices</h3>
+        <p>
+          Project Airos syncs portable context across phones, PCs, and wearables with privacy-first guardrails. Deploy on-device
+          or scale out via the edge when users need more power.
+        </p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>Sense + capture</strong>
+            <p>Wake words, microphones, cameras, and sensors feed the multimodal loop securely.</p>
+          </div>
+          <div class="timeline-item">
+            <strong>Interpret</strong>
+            <p>ASR, TTS, and LLM models run locally or at the edge depending on hardware constraints.</p>
+          </div>
+          <div class="timeline-item">
+            <strong>Remember</strong>
+            <p>Portable memory follows the user. Sync short-term context with longer-term knowledge bases under user control.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Flagship demos</h2>
+    <p class="lead">
+      Two showcases prove how sovereign agents unlock both futuristic devices and equitable education.
+    </p>
+    <div class="grid">
+      <article class="card">
+        <h3>Smart glasses agent</h3>
+        <p>
+          A privacy-first wearable assistant inspired by Meta’s Project Aria. Capture the world, ask real-time questions, and get
+          answers without sacrificing control.
+        </p>
+        <a class="button secondary" href="/applications">Explore the concept</a>
+      </article>
+      <article class="card">
+        <h3>AI education tutor</h3>
+        <p>
+          A Socratic AI tutor that keeps student progress local-first. Bring sovereign AI to classrooms that can’t rely on
+          always-on connectivity.
+        </p>
+        <a class="button secondary" href="/applications">See classroom impact</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

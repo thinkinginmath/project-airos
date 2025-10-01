@@ -1,0 +1,91 @@
+---
+import "../styles/global.css";
+
+const {
+  title = "Project Airos — Sovereign AI, in your hands",
+  description = "Project Airos is the open-source Agent OS for on-device and edge intelligence.",
+  current = "",
+} = Astro.props;
+
+const navItems = [
+  { id: "about", label: "About", href: "/about" },
+  { id: "tech", label: "Technology", href: "/tech" },
+  { id: "applications", label: "Applications", href: "/applications" },
+  { id: "docs", label: "Docs", href: "/docs" },
+  { id: "community", label: "Community", href: "/community" },
+  { id: "blog", label: "Blog", href: "/blog" },
+  { id: "contact", label: "Contact", href: "/contact" },
+];
+
+const footerLinks = navItems.filter((item) =>
+  ["docs", "community", "blog", "contact"].includes(item.id)
+);
+
+const currentYear = new Date().getFullYear();
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="/">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span>Project Airos</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+          Menu
+        </button>
+        <div class="nav-links" id="primary-navigation">
+          {navItems.map((item) => (
+            <a href={item.href} aria-current={current === item.id ? "page" : undefined}>
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div>
+          <strong>Project Airos</strong>
+          <p class="quote">
+            Building an open, sovereign AI Agent OS for devices inspired by Meta's Project Aria and beyond.
+          </p>
+        </div>
+        <div class="footer-links">
+          {footerLinks.map((item) => (
+            <a href={item.href}>{item.label}</a>
+          ))}
+        </div>
+        <small>© {currentYear} Project Airos. MIT Licensed.</small>
+      </div>
+    </footer>
+    <script>
+      const toggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      if (toggle && navLinks) {
+        toggle.addEventListener('click', () => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          navLinks.classList.toggle('open');
+        });
+      }
+    </script>
+  </body>
+</html>

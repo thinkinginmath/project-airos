@@ -1,47 +1,46 @@
 # Project Airos Website Deployment Guide
 
-The Project Airos site lives in the [`site/`](../site) directory. It is a static bundle (HTML, CSS, and a small JavaScript
-snippet) that can be hosted on any CDN or static web platform.
+The Project Airos site lives in the [`site/`](../site) directory and is implemented with the [Astro](https://astro.build/) framework. Astro builds a static bundle (HTML, CSS, and JavaScript) that can be hosted on any CDN or static web platform.
 
-## 1. Prepare the build
+## 1. Install dependencies & build
 
-Because the site is already static, the "build" step is simply ensuring all files under `site/` are up to date.
+Run these commands from the repository root when you need to publish an update:
 
 ```bash
 cd site
-python -m http.server 8000  # optional sanity check locally
+npm install          # first time or when dependencies change
+npm run build        # generates the production-ready bundle in site/dist
 ```
 
-Commit and push your changes once you are satisfied with the preview.
+Use `npm run dev` for live preview while editing content, and `npm run preview` to sanity-check the optimized build locally.
 
 ## 2. Deploy to GitHub Pages
 
-1. Create a branch and push the updated site content.
-2. In the GitHub repository, enable **GitHub Pages** with the `main` branch and `/site` folder.
-3. GitHub will automatically serve the content at `https://<org>.github.io/<repo>/`.
-4. When you merge new updates into `main`, Pages will redeploy.
+1. Commit the site changes (no need to commit the `dist/` output).
+2. Configure a GitHub Action to run `npm install` and `npm run build` inside `site/` on your chosen branch.
+3. Use the official [pages deploy action](https://github.com/actions/deploy-pages) (or similar) to publish `site/dist` to GitHub Pages.
+4. After the workflow completes, the site is available at `https://<org>.github.io/<repo>/`.
 
-> Tip: if you prefer a dedicated branch such as `gh-pages`, add a GitHub Action that copies the `site/` directory into that
-> branch on every push.
+> Tip: You can alternatively target a dedicated `gh-pages` branch by having the workflow upload the build artifacts there.
 
 ## 3. Deploy to Netlify or Vercel
 
-1. Connect the repository to your hosting provider.
-2. Configure the project to serve from the `site` directory with no build command (or `cp -r site/* public/` if a step is
-   required).
-3. Every push to the configured branch will trigger a redeploy.
+1. Connect the repository in the hosting dashboard.
+2. Set the build command to `npm run build` and the publish directory to `dist`.
+3. Ensure the working directory is `site/` (most hosts support this as an advanced setting).
+4. Every push to the configured branch will trigger a fresh Astro build and redeploy.
 
 ## 4. Manual hosting / S3 + CloudFront
 
-1. Zip the contents of `site/` and upload them to an S3 bucket configured for static site hosting.
-2. Invalidate the CDN cache (CloudFront or similar) after uploading new versions.
-3. Automate the upload with a script if you frequently update content.
+1. After running `npm run build`, upload the contents of `site/dist/` to your bucket or server.
+2. Configure the bucket for static site hosting (index document `index.html`).
+3. Invalidate your CDN cache (CloudFront or similar) after uploading new versions.
 
 ## 5. Content workflow best practices
 
-- **Preview first**: use `python -m http.server` or a Live Server plugin to view updates locally.
-- **Branch per update**: collaborate via pull requests to review copy, visuals, and layout changes.
-- **Track assets**: store future imagery under `site/assets/` and optimize (WebP/AVIF) before commit.
+- **Preview first**: `npm run dev` provides instant hot reload while editing copy or layouts.
+- **Branch per update**: collaborate via pull requests to review content, visuals, and layout changes.
+- **Track assets**: store imagery or downloads under `site/public/` (served statically) and optimize before commit.
 - **Document releases**: summarize major content updates in the blog section to keep visitors informed.
 
-With these steps you can iterate quickly on the Project Airos site and publish changes to production safely.
+Following this workflow keeps the Astro site fast to iterate on and simple to deploy across hosting providers.

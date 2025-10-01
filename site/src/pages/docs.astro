@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout
+  title="Project Airos Docs"
+  description="Start building with Project Airos using quickstart steps, deployment guidance, and the evolving documentation roadmap."
+  current="docs"
+>
+  <section class="page-hero">
+    <div class="badge">Documentation</div>
+    <h1>Build with Airos</h1>
+    <p>
+      High-level guides and references will grow into a full documentation portal. Start here for prototypes and pilot deployments.
+    </p>
+  </section>
+
+  <section class="content-section">
+    <article class="highlight-box">
+      <h2>Quickstart</h2>
+      <div class="list">
+        <div><strong>1.</strong> Clone the repository and explore the sample agents.</div>
+        <div><strong>2.</strong> Provision dependencies: Docker, Node.js, Python, and your preferred GPU runtime.</div>
+        <div><strong>3.</strong> Configure credentials for OpenAI, Anthropic, Qwen, or on-prem models.</div>
+        <div><strong>4.</strong> Launch the voice-first demo client and experiment with local inference.</div>
+      </div>
+    </article>
+  </section>
+
+  <section class="content-section">
+    <div class="grid">
+      <article class="card">
+        <h3>Local development</h3>
+        <p>Use Docker Compose recipes to bring up the orchestrator, ASR, TTS, and UI services with hot reload.</p>
+        <div class="chip-list">
+          <span class="chip">Docker</span>
+          <span class="chip">Hot reload</span>
+          <span class="chip">Live transcripts</span>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Edge deployment</h3>
+        <p>Deploy to edge clusters with Kubernetes or Nomad and leverage GPU pools for heavy workloads.</p>
+        <div class="chip-list">
+          <span class="chip">K8s</span>
+          <span class="chip">Nomad</span>
+          <span class="chip">Observability</span>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Extending modules</h3>
+        <p>Add new ASR, TTS, or LLM backends by implementing the adapter contract and registering capabilities.</p>
+        <div class="chip-list">
+          <span class="chip">Adapter SDK</span>
+          <span class="chip">Capability graph</span>
+          <span class="chip">Testing harness</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="highlight-box">
+      <h2>Docs roadmap</h2>
+      <p>Upcoming additions to the documentation hub.</p>
+      <ul class="list">
+        <li>Deep dives into ASR/TTS optimization and streaming protocols.</li>
+        <li>Guides for memory synchronization across devices.</li>
+        <li>Sample curriculum for the AI tutor deployment.</li>
+        <li>API reference for the agent orchestration layer.</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
