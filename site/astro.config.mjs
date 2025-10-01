@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  output: 'static'
+  output: 'static',
+  site: 'https://thinkinginmath.github.io',
+  base: '/project-airos'
 });
