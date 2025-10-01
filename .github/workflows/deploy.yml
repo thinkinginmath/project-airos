@@ -25,17 +25,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Verify site directory exists
-        run: |
-          echo "Checking if site directory exists..."
-          ls -la
-          if [ -d "site" ]; then
-            echo "site directory found"
-            ls -la site/
-          else
-            echo "ERROR: site directory not found!"
-            exit 1
-          fi
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: './site/package-lock.json'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./site
+
+      - name: Build Astro site
+        run: npm run build
+        working-directory: ./site
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -43,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './site'
+          path: './site/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
