@@ -46,18 +46,23 @@ Check [docs/](docs/) for early developer documentation.
 
 ## 🌐 Website
 
-The marketing site for Project Airos lives in [`site/`](site/). It is a static HTML/CSS experience that highlights the mission,
-technology, and flagship applications inspired by Meta's Project Aria research.
+The marketing site for Project Airos lives in [`site/`](site/). It is built with the [Astro](https://astro.build/) framework so we
+can compose reusable layouts while shipping a static bundle for deployment.
 
 ### Local preview
 
 1. `cd site`
-2. Start a lightweight web server: `python -m http.server 8000`
-3. Open `http://localhost:8000/index.html` in your browser and iterate on the content.
+2. Install dependencies (Node.js 18+): `npm install`
+3. Start the dev server: `npm run dev`
+4. Open the local URL Astro prints (defaults to `http://localhost:4321`) and iterate on content or layout.
 
-The site uses shared assets and relative links, so always run it from the `site/` directory or through a static hosting service.
+Astro supports hot-module reload, so edits to `.astro` files, styles, or configuration refresh the browser automatically.
 
-### Deployment
+### Build & deployment
+
+- Create an optimized static build: `npm run build`
+- Optionally preview the production build locally: `npm run preview`
+- Publish the generated `site/dist/` directory to your preferred static host (GitHub Pages, Netlify, Vercel, S3, etc.).
 
 Read [docs/deployment.md](docs/deployment.md) for recommended workflows to publish the latest site to GitHub Pages, Netlify, or
 other static hosts as content evolves.

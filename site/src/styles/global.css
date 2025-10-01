@@ -87,6 +87,11 @@ header {
   transition: background 0.2s ease;
 }
 
+.nav-links a[aria-current="page"] {
+  background: rgba(108, 240, 255, 0.16);
+  color: var(--color-primary);
+}
+
 .nav-links a:hover,
 .nav-links a:focus {
   background: rgba(108, 240, 255, 0.14);
