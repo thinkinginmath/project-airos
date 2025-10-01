@@ -7,16 +7,16 @@ const {
   current = "",
 } = Astro.props;
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const navItems = [
-  { id: "about", label: "About", href: `${base}about` },
-  { id: "tech", label: "Technology", href: `${base}tech` },
-  { id: "applications", label: "Applications", href: `${base}applications` },
-  { id: "docs", label: "Docs", href: `${base}docs` },
-  { id: "community", label: "Community", href: `${base}community` },
-  { id: "blog", label: "Blog", href: `${base}blog` },
-  { id: "contact", label: "Contact", href: `${base}contact` },
+  { id: "about", label: "About", href: `${base}/about` },
+  { id: "tech", label: "Technology", href: `${base}/tech` },
+  { id: "applications", label: "Applications", href: `${base}/applications` },
+  { id: "docs", label: "Docs", href: `${base}/docs` },
+  { id: "community", label: "Community", href: `${base}/community` },
+  { id: "blog", label: "Blog", href: `${base}/blog` },
+  { id: "contact", label: "Contact", href: `${base}/contact` },
 ];
 
 const footerLinks = navItems.filter((item) =>
@@ -42,7 +42,7 @@ const currentYear = new Date().getFullYear();
   <body>
     <header>
       <nav class="navbar" aria-label="Main navigation">
-        <a class="brand" href={base}>
+        <a class="brand" href={base || '/'}>
           <span class="brand-logo" aria-hidden="true"></span>
           <span>Project Airos</span>
         </a>
